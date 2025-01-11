@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Estonia&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    overflow-x: hidden;
+}
+
+/*nav*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.096);
+    backdrop-filter: blur(4px);
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    transition: ease 0.3s;
+    opacity: 0.5;
+}
+
+nav a:hover{
+    opacity: 1;
+}
+
+#logo{
+    opacity: 1;
+}
+
+.txt{
+    font-family: beau rivage;
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+}
+
+
+/*sobre mim*/
+.sobre{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    flex-direction: column;
+    margin-top: 200px;
+    scroll-margin-top: 150px; /* Define o espaço ao rolar */
+}
+
+.fe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.p-icons{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2rem;
+    text-align: justify; 
+
+}
+
+.tech{
+    display: flex;
+    gap: 1rem;
+    font-size: 30px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.tech i{
+    transition: ease 0.2s;
+}
+
+.tech i:hover{
+    color: white;
+    transform: scale(1.10);
+}
+
+.avatar{
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    transition: ease 0.3s;
+}
+
+.avatar:hover{
+    transform: scale(1.05);
+}
+
+/*redes sociais*/
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.btns a{
+    text-decoration: none;
+}
+
+.projects a{
+    text-decoration: none;
+}
+
+.butaum{
+    display: flex;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    transition: ease-in-out;
+    gap: 10px;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer; 
+    margin-top: 30px;
+}
+
+/*icons*/
+.devicon-github-original{
+    display: flex;
+    font-size: 20px;
+}
+
+.devicon-linkedin-plain{
+    display: flex;
+    font-size: 20px;
+}
+
+#github{
+    color: white;
+    background-color: black;
+    transition: ease 0.3s;
+}
+
+#linkedin{
+    background-color: white;
+    color: #0091ff;
+    transition: ease 0.3s;
+    /* box-shadow: #3d3d3d 0px 2px 29px 0px; */
+
+}
+
+#github:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.10);
+}
+
+#linkedin:hover{
+    background-color: #0091ff;
+    color: white;
+    transform: scale(1.10);
+}
+
+.myprojects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.projetinho{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects{
+    display: flex;
+    background: rgba(0, 0, 0, 0.096);
+    backdrop-filter: blur(4px);
+    color: rgb(255, 255, 255);
+    width: 350px;
+    height: 380px;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    gap: 0.8rem;
+    transition: ease 0.3s;
+}
+
+.projects:hover{
+    transform: scale(1.05);
+}
+
+.projects img{
+    display: flex;
+    width: 337px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+#vermais{
+    background-color: blueviolet;
+    color: white;
+    transition: ease 0.3s;
+}
+
+#vermais:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+::selection {
+    background-color: rgb(110, 19, 206); /* Cor do fundo da seleção */
+    color: white;            /* Cor do texto dentro da seleção */
+  }
+
+
+.fenomeno{
+    width: 100vw;
+    height: 100vh;
+}
+
+video{
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /*ocupa todo espaço sem deixar nenhuma brecha*/
+    transform: translate(-50%, 0%); /*fica no meio da tela e ocupa todo espaço */
+    z-index: -1; /* Colocar o vídeo atrás do */
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 5vw;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+
+.ficons{
+    display: flex;
+    gap: 1rem;
+}
+
+.ficons a{
+    text-decoration: none;
+}
+
+#fgithub{
+    color: white;
+}
+
+#flinkedin{
+    color: white;
+}
