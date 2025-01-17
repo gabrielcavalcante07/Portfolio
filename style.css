@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: poppins;
+    text-decoration: none;
 }
 
 html {
@@ -15,6 +16,7 @@ html {
 
 body{
     background-color: rgb(31, 31, 31);
+    /* background-color: #fff; */
     color: white;
     overflow-x: hidden;
 }
@@ -29,6 +31,7 @@ nav{
     position: fixed;
     background: rgba(0, 0, 0, 0.096);
     backdrop-filter: blur(4px);
+    z-index: 1;
 }
 
 nav a{
@@ -46,9 +49,11 @@ nav a:hover{
     opacity: 1;
 }
 
-.txt{
+.name{
     font-family: beau rivage;
     font-size: 2rem;
+    letter-spacing: 1px;
+    word-spacing: 10px;
 }
 
 ul{
@@ -67,8 +72,13 @@ ul{
     width: 100%;
     font-size: 1rem;
     flex-direction: column;
-    margin-top: 200px;
-    scroll-margin-top: 150px; /* Define o espaço ao rolar */
+    margin-top: 100px;
+    scroll-margin-top: 100px; /* Define o espaço ao rolar */
+}
+
+.sobre h1{
+    display: flex;
+    margin-bottom: 50px;
 }
 
 .fe{
@@ -96,20 +106,27 @@ ul{
     transition: ease 0.3s;
 }
 
+.tech img{
+    width: 30px;
+    height: 30px;
+}
+
 .tech i{
     transition: ease 0.2s;
 }
 
-.tech i:hover{
+/* .tech i:hover{
     color: white;
     transform: scale(1.10);
-}
+} */
 
 .avatar{
     border-radius: 100%;
     width: 400px;
     height: 400px;
     transition: ease 0.3s;
+    object-fit: cover; /* Faz a imagem se ajustar ao círculo sem distorcer */
+    background-position: center;
 }
 
 .avatar:hover{
@@ -126,6 +143,7 @@ ul{
 
 .btns a{
     text-decoration: none;
+    animation: moveScale 3s infinite ease-in-out;
 }
 
 .projects a{
@@ -158,14 +176,16 @@ ul{
 
 #github{
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: #00000059 0px 5px 15px;
     transition: ease 0.3s;
 }
 
 #linkedin{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     color: #0091ff;
     transition: ease 0.3s;
+    box-shadow: #00000059 0px 5px 15px;
     /* box-shadow: #3d3d3d 0px 2px 29px 0px; */
 
 }
@@ -174,12 +194,14 @@ ul{
     background-color: white;
     color: black;
     transform: scale(1.10);
+    border: none;
 }
 
 #linkedin:hover{
     background-color: #0091ff;
     color: white;
     transform: scale(1.10);
+    border: none;
 }
 
 .myprojects{
@@ -189,6 +211,7 @@ ul{
     margin-top: 150px;
     flex-direction: column;
     gap: 2rem;
+    scroll-margin-top: 100px;
 }
 
 
@@ -227,15 +250,18 @@ ul{
 }
 
 #vermais{
-    background-color: blueviolet;
+    background-color: rgba(137, 43, 226, 0);
     color: white;
     transition: ease 0.3s;
+    box-shadow: #00000059 0px 5px 15px;
+
 }
 
 #vermais:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(64, 0, 182);
     color: white;
 }
+
 
 ::selection {
     background-color: rgb(110, 19, 206); /* Cor do fundo da seleção */
@@ -258,24 +284,93 @@ video{
     z-index: -1; /* Colocar o vídeo atrás do */
 }
 
+.contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30rem;
+    margin-bottom: 20rem;
+    scroll-margin-top: 150px;
+}
 
+.cts button{
+    
+    display: flex;
+    padding: 15px 110px;
+    border-radius: 10px;
+    border: none;
+    gap: 10px;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer; 
+    margin-top: 30px;
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: ease 0.3s all;
+}
 
+#wpp{
+    background-color: #0091ff00;
+    /* border: solid 2px #00bf13; */
+    box-shadow: #00000059 0px 5px 15px;
+    color: #00bf13;
+}
 
+#gmail{
+    background-color: #0091ff00;
+    /* border: solid 1px #ff6666; */
+    box-shadow: #00000059 0px 5px 15px;
+    color: #ff6666;
+}
 
+#link{
+    background-color: #0091ff00;
+    /* border: solid 1px #0091ff; */
+    box-shadow: #00000059 0px 5px 15px;
+    color: #0091ff;
+}
 
+#wpp:hover{
+    background-color: #0091ff00;
+    /* border: solid 1px #fff; */
+    border: none;
+    color: #fff;
+    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset;
+}
 
+#gmail:hover{
+    background-color: #0091ff00;
+    /* border: solid 1px #fff; */
+    border: none;
+    color: #fff;
+    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset;
+}
 
-
+#link:hover{
+    background-color: #0091ff00;
+    /* border: solid 1px #fff; */
+    border: none;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset;
+}
 
 
 footer{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 5vw;
+    height: 8vw;
     align-items: center;
     margin-top: 5rem;
     gap: 1rem;
+    background-color: rgb(26, 26, 26);
+    padding: 20px 20px;
+    justify-content: center;
 }
 
 .ficons{
@@ -285,12 +380,19 @@ footer{
 
 .ficons a{
     text-decoration: none;
+    opacity: 0.7;
+}
+
+.ficons a:hover{
+    opacity: 1;
 }
 
 #fgithub{
     color: white;
+    font-size: 25px;
 }
 
 #flinkedin{
     color: white;
+    font-size: 25px;
 }
