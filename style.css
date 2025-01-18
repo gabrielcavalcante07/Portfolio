@@ -28,6 +28,7 @@ nav{
     align-items: center;
     padding: 20px 50px;
     width: 100vw;
+    height: 10vh;
     position: fixed;
     background: rgba(0, 0, 0, 0.096);
     backdrop-filter: blur(4px);
@@ -39,6 +40,7 @@ nav a{
     color: white;
     transition: ease 0.3s;
     opacity: 0.5;
+    padding-block: 16px;
 }
 
 nav a:hover{
@@ -56,13 +58,33 @@ nav a:hover{
     word-spacing: 10px;
 }
 
-ul{
+.nav-list{
     list-style: none;
     display: flex;
     gap: 20px;
     font-weight: 500;
 }
 
+/* nav mobile */
+.navMobile {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+  }
+  
+  .navMobile::after,
+  .navMobile::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
 
 /*sobre mim*/
 .sobre{
@@ -81,7 +103,7 @@ ul{
     margin-bottom: 50px;
 }
 
-.fe{
+.contends{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -114,11 +136,6 @@ ul{
 .tech i{
     transition: ease 0.2s;
 }
-
-/* .tech i:hover{
-    color: white;
-    transform: scale(1.10);
-} */
 
 .avatar{
     border-radius: 100%;
@@ -178,13 +195,13 @@ ul{
     color: white;
     background-color: rgba(0, 0, 0, 0);
     box-shadow: #00000059 0px 5px 15px;
-    transition: ease 0.3s;
+    transition: ease 0.5s;
 }
 
 #linkedin{
     background-color: rgba(255, 255, 255, 0);
     color: #0091ff;
-    transition: ease 0.3s;
+    transition: ease 0.5s;
     box-shadow: #00000059 0px 5px 15px;
     /* box-shadow: #3d3d3d 0px 2px 29px 0px; */
 
@@ -258,7 +275,7 @@ ul{
 }
 
 #vermais:hover{
-    background-color: rgb(64, 0, 182);
+    background-color: rgb(75, 0, 215);
     color: white;
 }
 
@@ -269,18 +286,17 @@ ul{
   }
 
 
-.fenomeno{
+.home{
     width: 100vw;
     height: 100vh;
 }
 
 video{
     position: absolute;
-    left: 50%;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     object-fit: cover; /*ocupa todo espaço sem deixar nenhuma brecha*/
-    transform: translate(-50%, 0%); /*fica no meio da tela e ocupa todo espaço */
+    transform: translate(0%, 0%); /*fica no meio da tela e ocupa todo espaço */
     z-index: -1; /* Colocar o vídeo atrás do */
 }
 
@@ -359,7 +375,7 @@ video{
     box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset;
 }
 
-
+/* footer */
 footer{
     display: flex;
     flex-direction: column;
@@ -395,4 +411,93 @@ footer{
 #flinkedin{
     color: white;
     font-size: 25px;
+}
+
+@media (max-width: 750px){
+
+      .navMobile {
+        display: block;
+        z-index: 1;
+      }
+    
+      .nav-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+        transform: translateX(100%);
+        background: rgb(37, 37, 37);
+      }
+    
+      .nav-list a {
+        font-size: 20px;
+      }
+    
+      .nav.active .nav-list {
+        transform: translateX(0);
+        pointer-events: all;
+      }
+    
+      .nav.active .navMobile {
+        position: fixed;
+        top: 26px;
+        right: 50px;
+        border-top-color: transparent;
+      }
+    
+      .nav.active .navMobile::before {
+        transform: rotate(135deg);
+        background: #9500ff;
+      }
+    
+      .nav.active .navMobile::after {
+        transform: rotate(-135deg);
+        top: -7px;
+        background: #9500ff;
+      }
+    
+    /* sobre */
+    .avatar{
+        width: 300px;
+        height: 300px;
+    }
+
+    .contends{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .tech{
+        justify-content: center;
+    }
+    
+    .projetinho{
+        flex-direction: column;
+    }
+
+    .p-icons{
+        width: 80%;
+    }
+    
+    footer{
+        height: 10vh;
+        gap: 8px;
+        width: 100%;
+    }
+
+    #fgithub, #flinkedin{
+        font-size: 20px;
+    }
+    
+    footer p{
+        font-size: 10px;
+    }
 }

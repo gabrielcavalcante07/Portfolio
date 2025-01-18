@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Gabriel Cavalcante</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
           
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <nav class="nav">
             <a href="#" id="logo"><h1 class="name">Gabriel CSantos</h1></a>
-            <ul>
+
+            <button class="navMobile"></button>
+            <ul class="nav-list">
                 <a href="#home">Home</a>
                 <a href="#sobremim">Sobre mim</a>
                 <a href="#meusprojetos">Projetos</a>
@@ -22,7 +25,7 @@
     </header>
 
     <!-- video de fundo -->
-    <div class="fenomeno" id="home">
+    <div class="home" id="home">
         <video autoplay muted loop class="video-fundo">
             <source src="./assets/background.mp4" type="video/mp4">
         </video>
@@ -32,7 +35,7 @@
     <!-- sobre mim -->
     <div class="sobre" id="sobremim">
         <h1>Sobre mim</h1>
-        <div class="fe">
+        <div class="contends">
             <img src="./assets/myphoto.jpg" alt="shadow-box" class="avatar">
             <div class="p-icons">
                     <p>Olá, me chamo Gabriel Cavalcante e sou um Desenvolvedor Fullstack Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat voluptate doloremque, hic dolores quo non aliquam voluptatum fuga temporibus illo fugit excepturi facilis. Porro temporibus error veritatis sapiente quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis. Nihil necessitatibus adipisci at consequatur recusandae eum reprehenderit vitae voluptatibus obcaecati repudiandae ad voluptas eligendi dolor cum nesciunt, exercitationem quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sunt delectus iste magni blanditiis facere necessitatibus voluptatem porro, totam reprehenderit quaerat. Optio dolorum sed deleniti fuga obcaecati, ipsum enim incidunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit deleniti eligendi voluptates optio mollitia, unde architecto est corrupti eum molestias pariatur libero inventore quis, nulla aspernatur consequuntur dolores ipsum. Tempore? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -81,6 +84,12 @@
                 <span>Lorem ipsum dolor sit amet</span>
                 <a href=""><button class="butaum" id="vermais">Ver mais</button></a>
             </div>
+            <div class="projects">
+                <img src="./assets/alura.png" class="pjimg"alt="">
+                <h3>Projeto 4</h3>
+                <span>Lorem ipsum dolor sit amet</span>
+                <a href=""><button class="butaum" id="vermais">Ver mais</button></a>
+            </div>
         </div>
     </div>
 
@@ -102,7 +111,7 @@
                 <a href="https://www.linkedin.com/in/gabrielcavalcantes/" target="_blank">
                 <i class="devicon-linkedin-plain" id="flinkedin"></i></a>
         </div>
-            <p>Todos Direitos Reservados - Gabriel Calcante 2025</p>
+            <p>©Todos Direitos Reservados - Gabriel Calcante 2025</p>
     </footer>
 </body>
 </html>
