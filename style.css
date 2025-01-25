@@ -233,9 +233,11 @@ nav a:hover{
 
 
 .projetinho{
+    max-width: 1400px;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .projects{
@@ -305,9 +307,9 @@ video{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30rem;
-    margin-bottom: 20rem;
-    scroll-margin-top: 150px;
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+    scroll-margin-top: 100px;
 }
 
 .cts button{
