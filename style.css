@@ -14,12 +14,20 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+  --primary: #915eff;
+  --secondary: #1a1a1a;
+}
+
 body{
-    background-color: rgb(31, 31, 31);
     /* background-color: #fff; */
+    background-color: var(--secondary);
     color: white;
     overflow-x: hidden;
+    height: 100vh;
+    background: #111;
 }
+
 
 /*nav*/
 nav{
@@ -27,12 +35,16 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    width: 100vw;
+    width: 80vw;
     height: 10vh;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.096);
+    background: rgba(0, 0, 0, 0.133);
     backdrop-filter: blur(4px);
     z-index: 1;
+    border-radius: 30px;
+    position: fixed;
+    
+    left: 50%;
+    transform: translate(-50%);
 }
 
 nav a{
@@ -63,6 +75,7 @@ nav a:hover{
     display: flex;
     gap: 20px;
     font-weight: 500;
+    font-size: 17px;
 }
 
 /* nav mobile */
@@ -86,6 +99,15 @@ nav a:hover{
     transition: 0.3s;
   }
 
+  /*home*/
+  .me{
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    height: 100vh;
+  }
+
 /*sobre mim*/
 .sobre{
     display: flex;
@@ -101,6 +123,7 @@ nav a:hover{
 .sobre h1{
     display: flex;
     margin-bottom: 50px;
+    color: var(--primary);
 }
 
 .contends{
@@ -192,33 +215,31 @@ nav a:hover{
 }
 
 #github{
-    color: white;
+    color: var(--primary);
     background-color: rgba(0, 0, 0, 0);
     box-shadow: #00000059 0px 5px 15px;
     transition: ease 0.5s;
+    border: solid var(--primary)2px;
 }
 
 #linkedin{
     background-color: rgba(255, 255, 255, 0);
-    color: #0091ff;
-    transition: ease 0.5s;
+    color: var(--primary);
     box-shadow: #00000059 0px 5px 15px;
-    /* box-shadow: #3d3d3d 0px 2px 29px 0px; */
-
+    transition: ease 0.5s;
+    border: solid var(--primary)2px;
 }
 
 #github:hover{
-    background-color: white;
-    color: black;
+    background-color: var(--primary);
+    color: white;
     transform: scale(1.10);
-    border: none;
 }
 
 #linkedin:hover{
-    background-color: #0091ff;
+    background-color: var(--primary);
     color: white;
     transform: scale(1.10);
-    border: none;
 }
 
 .myprojects{
@@ -231,6 +252,9 @@ nav a:hover{
     scroll-margin-top: 100px;
 }
 
+.myprojects h1{
+    color: var(--primary);
+}
 
 .projetinho{
     max-width: 1400px;
@@ -312,6 +336,10 @@ video{
     scroll-margin-top: 100px;
 }
 
+.contato h1{
+    color: var(--primary);
+}
+
 .cts button{
     
     display: flex;
@@ -333,49 +361,91 @@ video{
 
 #wpp{
     background-color: #0091ff00;
-    /* border: solid 2px #00bf13; */
-    box-shadow: #00000059 0px 5px 15px;
+    border: solid 2px #00bf13;
+    /* box-shadow: #00000059 0px 5px 15px; */
     color: #00bf13;
 }
 
 #gmail{
     background-color: #0091ff00;
-    /* border: solid 1px #ff6666; */
-    box-shadow: #00000059 0px 5px 15px;
+    border: solid 1px #ff6666;
+    /* box-shadow: #00000059 0px 5px 15px; */
     color: #ff6666;
 }
 
 #link{
     background-color: #0091ff00;
-    /* border: solid 1px #0091ff; */
-    box-shadow: #00000059 0px 5px 15px;
+    border: solid 1px #0091ff;
+    /* box-shadow: #00000059 0px 5px 15px; */
     color: #0091ff;
 }
 
 #wpp:hover{
-    background-color: #0091ff00;
+    background-color: #00bf13;
     /* border: solid 1px #fff; */
     border: none;
     color: #fff;
-    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset;
+    /* box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset; */
 }
 
 #gmail:hover{
-    background-color: #0091ff00;
+    background-color: #ff6666;
     /* border: solid 1px #fff; */
     border: none;
     color: #fff;
-    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset;
+    /* box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset; */
 }
 
 #link:hover{
-    background-color: #0091ff00;
+    background-color: #0091ff;
     /* border: solid 1px #fff; */
     border: none;
     color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(29, 29, 29, 0.5) -3px -3px 6px 1px inset; */
 }
+
+
+.dropdown {
+            position: relative;
+            display: flex;
+        }
+
+        .dropbtn {
+            background-color: #00000000;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0000006f;
+            width: 100px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.341);
+            z-index: 1;
+            margin-top: 45px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffffff13;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
 /* footer */
 footer{
@@ -389,6 +459,10 @@ footer{
     background-color: rgb(26, 26, 26);
     padding: 20px 20px;
     justify-content: center;
+}
+
+footer p{
+    font-size: 15px;
 }
 
 .ficons{
@@ -406,13 +480,14 @@ footer{
 }
 
 #fgithub{
-    color: white;
+    color: var(--primary);
     font-size: 25px;
 }
 
 #flinkedin{
-    color: white;
+    color: var(--primary);
     font-size: 25px;
+    transition: ease 0.5s;
 }
 
 @media (max-width: 750px){
@@ -428,18 +503,20 @@ footer{
         right: 0;
         width: 100vw;
         height: 100vh;
-        transition: 1s ease-out;
+        transition: 0.5s ease-out;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
-        gap: 0;
+        justify-content: center;
         pointer-events: none;
         transform: translateX(100%);
-        background: rgb(37, 37, 37);
+        background: rgba(0, 0, 0, 0.126);
+        backdrop-filter: blur(4px);
       }
     
       .nav-list a {
         font-size: 20px;
+        color: white;
+        opacity:1;
       }
     
       .nav.active .nav-list {
@@ -464,6 +541,11 @@ footer{
         top: -7px;
         background: #9500ff;
       }
+
+    /*home*/
+    .me{
+        font-size: 15px;
+    }
     
     /* sobre */
     .avatar{
